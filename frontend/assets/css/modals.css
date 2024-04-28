@@ -1,0 +1,31 @@
+.modal label,
+.modal label .form-control {
+	width: 100%;
+}
+.modal label .form-control:focus {
+	border-color: var(--primary-clr);
+}
+.modal label .form-control::placeholder {
+	font-size: 0.9rem;
+}
+.modal label {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3px;
+	margin-bottom: 1rem;
+}
+.modal .v-action-container {
+	margin-top: 1rem;
+}
+.modal .v-action-container .v-action {
+	background-color: var(--primary-clr);
+	color: var(--white);
+	font-size: 0.9rem;
+	width: 100%;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+/* .modal .v-action-; */

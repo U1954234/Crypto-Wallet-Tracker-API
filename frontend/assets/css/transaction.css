@@ -1,0 +1,139 @@
+.v-aside-left {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.3rem;
+}
+.v-aside-left .v-8229j,
+.v-aside-left .v-payment-method {
+	background-color: var(--white);
+	border-radius: 0.8rem;
+	padding: 1rem;
+	border: 1px solid #ddd5;
+}
+.v-aside-left .v-8229j .v-top .v-image {
+	display: flex;
+	border-radius: 0.4rem;
+	justify-content: center;
+	height: 4rem;
+	width: 4rem;
+	align-items: center;
+	margin-right: 1rem;
+	overflow: hidden;
+}
+.v-aside-left .v-8229j .v-bottom .v-action {
+	color: var(--white);
+	background-color: var(--primary-clr);
+	color: var(--white);
+	display: flex;
+	border-radius: 4px;
+	justify-content: center;
+	padding: 0.8rem 1rem;
+	font-size: 0.9rem;
+	line-height: 1;
+}
+.v-aside-left .v-card-list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+}
+.v-aside-left .v-card-list .v-each-card {
+	border-radius: 0.6rem;
+}
+.v-aside-left .v-each-card .v-image {
+	max-width: 4rem;
+	border-radius: 6px;
+	overflow: hidden;
+	height: 2.5rem;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	margin-right: 6px;
+	background-color: #ddd5;
+	padding: 0 10px;
+}
+.v-aside-left .v-each-card .v-text-content {
+	display: flex;
+	row-gap: 3px;
+	flex-direction: column;
+}
+.v-aside-left .v-each-card .v-text-content .v-sm-text {
+	font-size: 0.9rem;
+	line-height: 1;
+	font-kerning: none;
+	opacity: 0.8;
+}
+.v-table-wrapper {
+	padding: 1rem 0.8rem;
+	border-radius: 0.7rem;
+	border: 1px solid #ddd6;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	background-color: var(--white);
+}
+.v-table-wrapper .v-listed-table-container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.2rem;
+}
+.v-table-wrapper .v-listed-table-container .v-each-transaction {
+	border-radius: 8px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 1rem;
+	background-color: transparent;
+	transition: 300ms ease-in-out;
+}
+.v-table-wrapper .v-listed-table-container .v-each-transaction:hover {
+	background-color: #ddd5;
+}
+.v-listed-table-container .v-each-transaction .v-left {
+	display: flex;
+	align-items: center;
+}
+.v-listed-table-container .v-each-transaction .v-text-content {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	margin-left: 10px;
+	row-gap: 6px;
+}
+.v-listed-table-container .v-each-transaction .v-left .v-image {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 5px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.v-listed-table-container .v-each-transaction .v-datetime {
+	line-height: 1;
+	font-size: 0.8rem;
+	font-kerning: none;
+}
+.v-listed-table-container .v-each-transaction .v-title {
+	line-height: 1;
+	font-size: 0.95rem;
+}
+.v-listed-table-container .v-each-transaction .v-status {
+	font-size: 0.8rem;
+	line-height: 1;
+	padding: 0.4rem 0.7rem;
+	border-radius: 100vmax;
+	text-transform: capitalize;
+}
+.v-listed-table-container .v-each-transaction .v-status.pending {
+	background-color: var(--bg-status-pending);
+	color: var(--text-clr-pending);
+}
+.v-listed-table-container .v-each-transaction .v-status.success {
+	background-color: var(--bg-status-success);
+	color: var(--text-clr-success);
+}
+.v-listed-table-container .v-each-transaction .v-status.failed {
+	background-color: var(--bg-status-failed);
+	color: var(--text-clr-failed);
+}

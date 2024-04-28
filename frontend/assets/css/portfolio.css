@@ -1,0 +1,199 @@
+.v-board-container {
+	padding: 1rem;
+	background-color: var(--white);
+	border-radius: 1rem;
+	border: 1px solid #ddd5;
+}
+.v-board-container .v-table-wrapper {
+	margin-top: 1.5rem;
+	row-gap: 5px;
+	display: flex;
+	flex-direction: column;
+}
+.v-table-wrapper .v-each-table-item {
+	display: flex;
+	align-items: center;
+}
+.v-table-wrapper .v-each-table-item > * {
+	flex-grow: 1;
+}
+.v-table-wrapper .v-each-table-item .v-left-inner {
+	display: flex;
+}
+.v-table-wrapper .v-each-table-item .v-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	border-radius: 5px;
+	border: 1.5px solid #ddd8;
+	background-color: #ddd2;
+}
+.v-table-wrapper .v-each-table-item .v-datetime {
+	font-size: 0.9rem;
+	font-kerning: none;
+	opacity: 0.8;
+}
+.v-table-wrapper .v-each-table-item .v-status {
+	font-size: 0.86rem;
+	font-weight: 600;
+	padding: 5px 10px;
+	border-radius: 100vmax;
+	letter-spacing: 0.4px;
+}
+.v-table-wrapper .v-each-table-item .v-status.pending {
+	color: var(--text-clr-pending);
+	background-color: var(--bg-status-pending);
+}
+.v-table-wrapper .v-each-table-item .v-status.failed {
+	background-color: var(--bg-status-failed);
+	color: var(--text-clr-failed);
+}
+.v-table-wrapper .v-each-table-item .v-status.success {
+	background-color: var(--bg-status-success);
+	color: var(--text-clr-success);
+}
+.v-table-wrapper .v-each-table-item.debit .v-icon {
+	color: var(--text-clr-failed);
+}
+.v-table-wrapper .v-each-table-item.credit .v-icon {
+	color: var(--text-clr-success);
+}
+
+.v-grid-container {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr;
+}
+.v-grid-container .v-each-grid-item {
+	border-radius: 1rem;
+	overflow: hidden;
+	background-color: rgba(var(--primary-clr-variant), 0.1);
+}
+.v-grid-container .v-each-grid-item-inner {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 1rem;
+	row-gap: 1.5rem;
+	background-color: var(--primary-clr);
+}
+.v-grid-container .v-each-grid-item-inner .coin-price,
+.v-grid-container .v-each-grid-item-inner * {
+	color: var(--white);
+}
+.v-grid-container .v-each-grid-item-inner .v-image-icon {
+	width: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.v-each-grid-item-inner .v-top-content .v-subtext {
+	font-size: 0.85rem;
+	font-kerning: none;
+	line-height: 1;
+	opacity: 0.8;
+	text-transform: uppercase;
+}
+.v-each-grid-item footer > * {
+	font-size: 0.9rem;
+	font-kerning: none;
+}
+.v-each-grid-item footer .v-buy {
+	color: var(--text-clr-success);
+}
+.v-each-grid-item footer .v-sell {
+	color: var(--text-clr-failed);
+}
+.v-wal-container {
+	background-color: var(--primary-clr);
+	height: 100%;
+	padding: 1rem;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.v-wal-container .v-actions {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.v-wal-container .v-actions .v-action {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: var(--white);
+	row-gap: 5px;
+	transition: 300ms ease-in-out;
+}
+.v-wal-container .v-actions .v-icon {
+	padding: 12px;
+	border-radius: 50%;
+	display: flex;
+	border: 1px solid transparent;
+	background-color: rgba(255 255 255 / 0.1);
+	color: var(--white);
+	transition: 300ms ease-in-out;
+	align-items: center;
+	justify-content: center;
+}
+.v-wal-container .v-actions .v-action-text {
+	font-size: 0.85rem;
+	opacity: 0.7;
+	transition: 300ms ease-in-out;
+}
+.v-wal-container .v-actions .v-action:hover .v-icon {
+	border-color: rgba(255 255 255 / 0.4);
+}
+.v-wal-container .v-actions .v-action:hover .v-action-text {
+	opacity: 1;
+}
+.v-wal-container b,
+.v-wal-container .v-bal {
+	font-kerning: none;
+	letter-spacing: 0.3px;
+	color: var(--white);
+}
+
+.v-wal-container .v-toggler-price-visibility {
+	padding: 10px;
+	background-color: transparent;
+	color: var(--white);
+	transform: 500ms ease-in-out;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.v-wal-container .v-toggler-price-visibility:hover {
+	background-color: rgba(255 255 255 / 0.1);
+}
+.v-wal-container .v-toggler-price-visibility svg {
+	--size: 1.6rem;
+}
+.v-extra {
+	background-color: rgba(255 255 255 / 0.1);
+	padding: 10px 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	color: var(--white);
+	font-size: 0.9rem;
+	column-gap: 0.5rem;
+}
+.v-extra .v-icon {
+	display: flex;
+	align-items: center;
+}
+.v-chart-board-container {
+	background-color: var(--white);
+	padding: 1rem;
+	border-radius: 1rem;
+	border: 1px solid #ddd5;
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="var(--primary-clr)" />
+		<link rel="shortcut icon" href="../assets/media/svg/logoipsum-296.svg" type="image/x-icon" />
+		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../assets/css/general.css" />
+		<link rel="stylesheet" href="../assets/css/transaction.css" />
+		<link rel="stylesheet" href="../assets/css/media-query.css" />
+
+		<title>Dashboard Layout</title>
+	</head>
+	<body id="app" v-cloak>
+		<div class="v-body-wrapper">
+			<header id="v-header-container">
+				<nav class="v-header-inner d-flex align-items-center justify-content-between">
+					<a href="./overview.html">
+						<div class="v-logo">
+							<img src="../assets/media/svg/logo.svg" alt="" class="img-fluid" />
+						</div>
+					</a>
+					<div class="v-right-nav">
+						<div class="position-relative">
+							<button type="button" class="v-toggle-noti" data-target="v-noti-dropdown">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+									<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+										<path d="M19.4 14.9C20.2 16.4 21 17 21 17H3s3-2 3-9c0-3.3 2.7-6 6-6c.7 0 1.3.1 1.9.3M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+										<circle cx="18" cy="8" r="4" stroke="var(--primary-clr)" fill="var(--primary-clr)" />
+									</g>
+								</svg>
+							</button>
+							<div class="v-noti-dropdown v-dropdown" data-v-expanded="false" data-receiver="v-noti-dropdown">
+								<header class="v-noti-header">
+									<div class="v-top">
+										<h6 class="v-title">Notifications</h6>
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+											<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+												<path d="M19.4 14.9C20.2 16.4 21 17 21 17H3s3-2 3-9c0-3.3 2.7-6 6-6c.7 0 1.3.1 1.9.3M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+												<circle cx="18" cy="8" r="3" />
+											</g>
+										</svg>
+									</div>
+									<div class="v-bottom">
+										<button type="button" class="v-noti-toggler active" data-target="all">
+											<span class="v-text">All</span>
+											<div class="v-num-of-noti">3</div>
+										</button>
+										<button type="button" class="v-noti-toggler" data-target="security">
+											<span class="v-text">Security</span>
+											<div class="v-num-of-noti">1</div>
+										</button>
+										<button type="button" class="v-noti-toggler" data-target="activities">
+											<span class="v-text">My activities</span>
+											<div class="v-num-of-noti">0</div>
+										</button>
+									</div>
+								</header>
+								<div class="v-dropdown-body">
+									<div class="v-notifs-container active" data-receiver="all">
+										<!-- each noti @::start -->
+										<div class="v-each-noti">
+											<span class="v-main-noti"> You just logged in into your account. </span>
+											<span class="v-datetime">20 Jan, 2023. 13:45</span>
+										</div>
+										<!-- each noti @::end -->
+										<!-- each noti @::start -->
+										<div class="v-each-noti">
+											<span class="v-main-noti"> You just logged in into your account. </span>
+											<span class="v-datetime">20 Jan, 2023. 13:45</span>
+										</div>
+										<!-- each noti @::end -->
+										<!-- each noti @::start -->
+										<div class="v-each-noti">
+											<span class="v-main-noti"> We noticed you just logged in. If this was not you, kindly chat with our support team. </span>
+											<span class="v-datetime">20 Jan, 2023. 18:45</span>
+										</div>
+										<!-- each noti @::end -->
+										<!-- each noti @::start -->
+										<div class="v-each-noti">
+											<span class="v-main-noti"> We noticed you just logged in. If this was not you, kindly chat with our support team. </span>
+											<span class="v-datetime">20 Jan, 2023. 18:45</span>
+										</div>
+										<!-- each noti @::end -->
+									</div>
+									<div class="v-notifs-container" data-receiver="security">
+										<!-- each noti @::start -->
+										<div class="v-each-noti">
+											<span class="v-main-noti"> You just logged in into your account. </span>
+											<span class="v-datetime">20 Jan, 2023. 13:45</span>
+										</div>
+										<!-- each noti @::end -->
+										<!-- each noti @::start -->
+										<div class="v-each-noti">
+											<span class="v-main-noti"> You just logged in into your account. </span>
+											<span class="v-datetime">20 Jan, 2023. 13:45</span>
+										</div>
+										<!-- each noti @::end -->
+										<!-- each noti @::start -->
+										<div class="v-each-noti">
+											<span class="v-main-noti"> We noticed you just logged in. If this was not you, kindly chat with our support team. </span>
+											<span class="v-datetime">20 Jan, 2023. 18:45</span>
+										</div>
+										<!-- each noti @::end -->
+										<!-- each noti @::start -->
+										<div class="v-each-noti">
+											<span class="v-main-noti"> We noticed you just logged in. If this was not you, kindly chat with our support team. </span>
+											<span class="v-datetime">20 Jan, 2023. 18:45</span>
+										</div>
+										<!-- each noti @::end -->
+									</div>
+									<div class="v-notifs-container" data-receiver="activities">
+										<!-- each noti @::start -->
+										<div class="v-each-noti">
+											<span class="v-main-noti"> You bought 14$ Bitcoin </span>
+											<span class="v-datetime">20 Jan, 2023. 13:45</span>
+										</div>
+										<!-- each noti @::end -->
+										<!-- each noti @::start -->
+										<div class="v-each-noti">
+											<span class="v-main-noti"> You bought $30 USDT</span>
+											<span class="v-datetime">20 Jan, 2023. 13:45</span>
+										</div>
+										<!-- each noti @::end -->
+									</div>
+								</div>
+								<div class="v-dropdown-footer">
+									<div class="d-flex align-items-center justify-content-center">
+										<a href="#" class="v-see-all-noti"> View all notifications </a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="position-relative">
+							<div class="d-flex align-items-center gap-3">
+								<button type="button" class="v-toggle-profile" data-target="v-profile-dropdown">
+									<div class="v-profile-image">
+										<img src="../assets/media/svg/Avatar.svg" alt="" class="img-fluid" />
+									</div>
+									<div class="v-right-nav-detail d-none d-sm-flex">
+										<span class="v-user-name">Okeke JohnPaul </span>
+										<span class="v-user-level">Level 1 Verified</span>
+									</div>
+								</button>
+								<button type="button" class="v-mobile-menu-toggler d-md-none">
+									<div class="v-toggle">
+										<span class="v-stroke"></span>
+										<span class="v-stroke"></span>
+										<span class="v-stroke"></span>
+									</div>
+								</button>
+							</div>
+							<div class="v-profile-dropdown v-dropdown" data-v-expanded="false" data-receiver="v-profile-dropdown">
+								<div class="v-step-container v-step-one">
+									<div class="v-profile-image">
+										<img src="../assets/media/svg/Avatar.svg" alt="" class="img-fluid" />
+									</div>
+									<span class="v-profile-name">Okeke JohnPaul</span>
+									<span class="v-profile-username">@JohnnyDepp</span>
+								</div>
+								<div class="v-step-container v-step-two">
+									<ul class="v-dropdown-link-list">
+										<li>
+											<a href="#" class="v-link">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+													<g transform="translate(24 0) scale(-1 1)">
+														<g fill="none" fill-rule="evenodd">
+															<path
+																d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+															<path
+																fill="currentColor"
+																d="M16 14a5 5 0 0 1 4.995 4.783L21 19v2a1 1 0 0 1-1.993.117L19 21v-2a3 3 0 0 0-2.824-2.995L16 16H8a3 3 0 0 0-2.995 2.824L5 19v2a1 1 0 0 1-1.993.117L3 21v-2a5 5 0 0 1 4.783-4.995L8 14h8ZM12 2a5 5 0 1 1 0 10a5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z" />
+														</g>
+													</g>
+												</svg>
+												<span class="v-link-name">Profile</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="v-link">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+													<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+														<path d="M19.4 14.9C20.2 16.4 21 17 21 17H3s3-2 3-9c0-3.3 2.7-6 6-6c.7 0 1.3.1 1.9.3M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+														<circle cx="18" cy="8" r="3" />
+													</g>
+												</svg>
+												<span class="v-link-name">Notification</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="v-step-container v-step-four">
+									<li class="v-dropdown-link-list">
+										<a href="" class="v-link">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+												<g transform="translate(24 0) scale(-1 1)">
+													<g fill="none" stroke="currentColor" stroke-width="1.5">
+														<path
+															stroke-linecap="round"
+															d="M8.002 7c.012-2.175.109-3.353.877-4.121C9.758 2 11.172 2 14 2h1c2.829 0 4.243 0 5.122.879C21 3.757 21 5.172 21 8v8c0 2.828 0 4.243-.878 5.121C19.242 22 17.829 22 15 22h-1c-2.828 0-4.242 0-5.121-.879c-.768-.768-.865-1.946-.877-4.121" />
+														<path
+															d="M8 19.5c-2.357 0-3.536 0-4.268-.732C3 18.035 3 16.857 3 14.5v-5c0-2.357 0-3.536.732-4.268C4.464 4.5 5.643 4.5 8 4.5" />
+														<path stroke-linecap="round" stroke-linejoin="round" d="M15 12H6m0 0l2 2m-2-2l2-2" />
+													</g>
+												</g>
+											</svg>
+											<span class="v-link-name">Log out</span>
+										</a>
+									</li>
+								</div>
+							</div>
+						</div>
+						<div id="v-backdrop"></div>
+					</div>
+				</nav>
+			</header>
+			<section id="v-main">
+				<aside class="v-menu-sidebar">
+					<ul class="v-menu-sidebar-inner">
+						<li class="v-link-container">
+							<ul class="v-main-links">
+								<li class="v-main-link-container">
+									<a href="./overview.html" class="v-sidebar-link">
+										<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+											<path
+												fill="currentColor"
+												d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3c0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8c24.9-25 24.9-65.5-.1-90.5z" />
+										</svg>
+										<span class="v-link-name"> Overview </span>
+									</a>
+								</li>
+
+								<li class="v-main-link-container">
+									<a href="./portfolio.html" class="v-sidebar-link">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+											<g fill="none" fill-rule="evenodd">
+												<path
+													d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+												<path
+													fill="currentColor"
+													d="M9.1 2h5.8a3 3 0 0 1 2.12.879l4.101 4.1A3 3 0 0 1 22 9.101v5.798a3 3 0 0 1-.879 2.122l-4.1 4.1a3 3 0 0 1-2.122.879H9.101a3 3 0 0 1-2.122-.879l-4.1-4.1A3 3 0 0 1 2 14.899V9.101a3 3 0 0 1 .879-2.122l4.1-4.1A3 3 0 0 1 9.101 2Z" />
+											</g>
+										</svg>
+										<span class="v-link-name"> Portfolio </span>
+									</a>
+								</li>
+								<li class="v-main-link-container">
+									<a href="./transaction.html" class="v-sidebar-link">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
+											<defs>
+												<mask id="ipSExchangeFour0">
+													<g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+														<path fill="#fff" stroke="#fff" d="M39 6H9a3 3 0 0 0-3 3v30a3 3 0 0 0 3 3h30a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3" />
+														<path stroke="#000" d="M15 21h18m-18 6h18m0-6l-7-7m-4 20l-7-7" />
+													</g>
+												</mask>
+											</defs>
+											<path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSExchangeFour0)" />
+										</svg>
+										<span class="v-link-name"> Transactions </span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="v-link-container">
+							<a href="" class="v-sidebar-link">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+									<g transform="translate(24 0) scale(-1 1)">
+										<g fill="currentColor">
+											<path
+												fill-rule="evenodd"
+												d="M16.125 12a.75.75 0 0 0-.75-.75H4.402l1.961-1.68a.75.75 0 1 0-.976-1.14l-3.5 3a.75.75 0 0 0 0 1.14l3.5 3a.75.75 0 1 0 .976-1.14l-1.96-1.68h10.972a.75.75 0 0 0 .75-.75Z"
+												clip-rule="evenodd" />
+											<path
+												d="M9.375 8c0 .702 0 1.053.169 1.306a1 1 0 0 0 .275.275c.253.169.604.169 1.306.169h4.25a2.25 2.25 0 0 1 0 4.5h-4.25c-.702 0-1.053 0-1.306.168a1 1 0 0 0-.275.276c-.169.253-.169.604-.169 1.306c0 2.828 0 4.243.879 5.121c.878.879 2.292.879 5.12.879h1c2.83 0 4.243 0 5.122-.879c.879-.878.879-2.293.879-5.121V8c0-2.828 0-4.243-.879-5.121C20.617 2 19.203 2 16.375 2h-1c-2.829 0-4.243 0-5.121.879c-.879.878-.879 2.293-.879 5.121Z" />
+										</g>
+									</g>
+								</svg>
+								<span class="v-link-name">Log out</span>
+							</a>
+						</li>
+					</ul>
+				</aside>
+				<main class="v-main-content">
+					<div class="v-main-content-inner col-lg-11 mx-auto">
+						<header><h4>My Wallet</h4></header>
+						<div class="row col-12 justify-content-between m-0 mt-4 align-item-stretch row-gap-4">
+							<aside class="col-xl-5 p-0 pe-lg-4 v-aside v-aside-left">
+								<div class="p-4 v-8229j">
+									<div class="v-top d-flex align-items-center column-gap-2">
+										<div class="v-image" role="image">
+											<img src="../assets/media/svg/BNB.svg" alt="" class="img-fluid" />
+										</div>
+										<div class="v-wallet-content">
+											<span class="v-text">Available (USD)</span>
+											<h2 class="v-bal">&dollar;{{user_details && user_details.cryptocurrencies.reduce((total, obj) => total + new Number(obj.value), 0)}}</h2>
+										</div>
+									</div>
+								</div>
+							</aside>
+							<aside class="col-xl-7 p-0 v-aside v-aside-right">
+								<div class="v-table-wrapper">
+									<header>
+										<h5 class="v-table-title"><b>Transactions</b></h5>
+									</header>
+									<div class="v-listed-table-container">
+										<template v-if="transactions">
+											<template v-for="(data,index) in transactions">
+												<button type="button" data-bs-target="#offcanvasExample" data-bs-toggle="offcanvas" class="v-each-transaction" @click="transaction_details = data">
+													<div class="v-left">
+														<span class="v-image">
+															<img src="../assets/media/svg/BNB.svg" alt="" class="img-fluid" />
+														</span>
+														<div class="v-text-content">
+															<span class="v-title">Adress: {{data.address}}</span>
+															<span class="v-datetime">{{data.date}}</span>
+														</div>
+													</div>
+													<div class="v-right d-flex flex-column flex-sm-row row-gap-1 column-gap-4">
+														<b>-&dollar;{{data.amount}}</b>
+														<span class="v-status success">Success</span>
+													</div>
+												</button>
+											</template>
+										</template>
+									</div>
+								</div>
+							</aside>
+						</div>
+					</div>
+				</main>
+			</section>
+
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title">Transaction</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<div class="d-flex align-items-center text-center flex-column row-gap-2 mb-4">
+						<span class="v-icon-status success">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
+								<g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4">
+									<path
+										d="M24 44a19.937 19.937 0 0 0 14.142-5.858A19.937 19.937 0 0 0 44 24a19.938 19.938 0 0 0-5.858-14.142A19.937 19.937 0 0 0 24 4A19.938 19.938 0 0 0 9.858 9.858A19.938 19.938 0 0 0 4 24a19.937 19.937 0 0 0 5.858 14.142A19.938 19.938 0 0 0 24 44Z" />
+									<path stroke-linecap="round" d="m16 24l6 6l12-12" />
+								</g>
+							</svg>
+						</span>
+						<span class="v-status-text">
+							<b>Transaction Success</b>
+						</span>
+						<div class="d-flex align-items-baseline column-gap-1 justify-content-center text-center">
+							<h1 class="v-amt">-&dollar;{{transaction_details.amount}}</h1>
+							<span class="v-wal">USD</span>
+						</div>
+					</div>
+					<div class="v-offcanvas-body-inner">
+						<div class="v-each-data two">
+							<div class="v-left">Type</div>
+							<div class="v-right">{{transaction_details.type}}</div>
+						</div>
+						<div class="v-each-data">
+							<div class="v-left">Status</div>
+							<div class="v-right v-status success">Successful</div>
+						</div>
+						<div class="v-each-data">
+							<div class="v-left">Date</div>
+							<div class="v-right">{{transaction_details.date}}</div>
+						</div>
+						<div class="v-each-data">
+							<div class="v-left">Completed Date</div>
+							<div class="v-right">{{transaction_details.date}}</div>
+						</div>
+						<div class="v-each-data">
+							<div class="v-left">Transaction ID</div>
+							<div class="v-right">
+								<div class="v-data">REFERENCE_ID_{{transaction_details.id}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../assets/js/bootstrap.min.js"></script>
+		<script src="../assets/js/index.custom.js"></script>
+		<script src="../assets/js/bootstrap.min.js"></script>
+		<script src="../assets/js/index.custom.js"></script>
+		<script src="../assets/js/bootstrap.min.js"></script>
+		<script>
+			const Toast = Swal.mixin({
+			toast: true,
+			position: 'top-end',
+			showConfirmButton: false,
+			timer: 3000,
+			timerProgressBar: true,
+			didOpen: (toast) => {
+				toast.addEventListener('mouseenter', Swal.stopTimer)
+				toast.addEventListener('mouseleave', Swal.resumeTimer)
+			}
+			});
+		</script>
+		<script src="../assets/js/index.custom.js"></script>
+		<script src="../assets/js/vue.global.js"></script>
+		<script src="../assets/js/vue.global.prod.js"></script>
+		<script src="../assets/js/config.js"> </script>
+		<script src="../assets/js/user.js?version=2342342388"></script>
+	</body>
+</html>
